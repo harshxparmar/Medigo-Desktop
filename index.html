@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medigo - Find Doctors and Book Appointments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-hospital"></i> Medigo</h1>
+            <p>Your trusted partner in healthcare. Find the nearest hospitals, check doctor availability, and book appointments with ease.</p>
+        </header>
+        
+        <div class="grid">
+            <div class="section">
+                <h2><i class="fas fa-map-marker-alt"></i> Find Nearest Hospital</h2>
+                <input type="text" id="location" placeholder="Enter your location">
+                <button onclick="findHospital()"><i class="fas fa-search"></i> Search</button>
+                <div id="hospital-list"></div>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-user-md"></i> Check Doctor Availability</h2>
+                <select id="specialty">
+                    <option value="general">General Physician</option>
+                    <option value="cardiologist">Cardiologist</option>
+                    <option value="dentist">Dentist</option>
+                </select>
+                <button onclick="checkAvailability()"><i class="fas fa-calendar-check"></i> Check Availability</button>
+                <div id="doctor-list"></div>
+            </div>
+
+            <div class="section">
+                <h2><i class="fas fa-calendar-alt"></i> Book Appointment</h2>
+                <select id="doctor-select">
+                </select>
+                <input type="datetime-local" id="appointment-time">
+                <button onclick="bookAppointment()"><i class="fas fa-book"></i> Book Appointment</button>
+                <div id="booking-confirmation"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
